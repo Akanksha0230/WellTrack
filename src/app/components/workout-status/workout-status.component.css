@@ -1,0 +1,13 @@
+.status-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .status-container h2 {
+    font-size: 24px;
+  }
+  
+  .status-container p {
+    font-size: 18px;
+  }
+  

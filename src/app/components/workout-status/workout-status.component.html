@@ -1,0 +1,25 @@
+<div *ngIf="workout">
+  <h2>{{ workout.userName }}'s Workout Status</h2>
+  <p>Workout Type: {{ workout.workoutType }}</p>
+  <p>Duration: {{ workout.minutes }} minutes</p>
+  <p>Date: {{ workout.date | date }}</p>
+
+  <!-- Countdown chart component -->
+  <app-countdown-chart [duration]="workout.minutes"></app-countdown-chart>
+
+  <!-- Workout completion chart component -->
+  <app-workout-chart [userId]="workout.userId"></app-workout-chart>
+</div>
+
+<div *ngIf="error">
+  <p>{{ error }}</p>
+</div>
+
+<div *ngIf="!workout && !error">
+  <p>Loading...</p>
+</div>
+
+
+
+
+

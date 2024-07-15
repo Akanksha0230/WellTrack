@@ -1,0 +1,69 @@
+/* workout-list.component.css */
+/* Container styles */
+.p-4 {
+  padding: 1rem;
+}
+
+/* Input styles */
+.input {
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Select styles */
+.input-select {
+  position: relative;
+}
+
+.input-select select {
+  appearance: none;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  padding-right: 2rem;
+  background-color: #ffffff;
+}
+
+.input-select svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5rem;
+}
+
+/* Workout item styles */
+.workout-item {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.workout-item:hover {
+  background-color: #edf2f7;
+}
+
+/* Pagination styles */
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #4299e1;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3182ce;
+}
+
+.button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+  
+
+
+
+  

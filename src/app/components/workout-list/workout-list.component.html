@@ -1,0 +1,46 @@
+<div class="p-4">
+  <input [(ngModel)]="searchTerm" placeholder="Search by Name" class="input" />
+  <select [(ngModel)]="filterType" class="input">
+    <option value="">All</option>
+    <option value="Cardio">Cardio</option>
+    <option value="Strength">Strength</option>
+    <option value="Flexibility">Flexibility</option>
+    <option value="Running">Running</option>
+    <option value="Cycling">Cycling</option>
+  </select>
+  <div *ngFor="let workout of filteredWorkouts()">
+    
+    <div class="workout-item" (click)="selectUser(workout.userId)">
+      <p>{{ workout.userName }} - {{ workout.workoutType }} - {{ workout.minutes }} minutes</p>
+    </div>
+    
+  </div>
+   <!-- Pagination controls -->
+   <div class="flex justify-between mt-4">
+    <button class="button" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <button class="button" (click)="nextPage()" [disabled]="currentPage * pageSize >= workouts.length">Next</button>
+  </div>
+  <div *ngIf="selectedUserId !== null">
+    <app-workout-chart [userId]="selectedUserId"></app-workout-chart>
+  </div>
+</div>
+
+
+
+
+<!-- <p>Workout List Component Works!</p>
+<div class="p-4">
+    <input [(ngModel)]="searchTerm" placeholder="Search by Name" class="input" />
+    <select [(ngModel)]="filterType" class="input">
+      <option value="">All</option>
+      <option value="Cardio">Cardio</option>
+      <option value="Strength">Strength</option>
+      <option value="Flexibility">Flexibility</option>
+    </select>
+    <div *ngFor="let workout of filteredWorkouts()">
+      <div class="workout-item">
+        <p>{{ workout.userName }} - {{ workout.workoutType }} - {{ workout.minutes }} minutes</p>
+      </div>
+    </div>
+  </div> -->
+  

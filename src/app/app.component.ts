@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { WorkoutFormComponent } from './components/workout-form/workout-form.component';
+import { WorkoutListComponent } from './components/workout-list/workout-list.component';
+import { WorkoutChartComponent } from './components/workout-chart/workout-chart.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [WorkoutFormComponent, WorkoutListComponent, WorkoutChartComponent] 
 })
 export class AppComponent {
   title = 'WellTrack';

@@ -1,0 +1,26 @@
+<div class="p-4">
+  <form (ngSubmit)="addWorkout()">
+    <input [(ngModel)]="workout.userId" name="userId" placeholder="User ID" class="input" required />
+    <input [(ngModel)]="workout.userName" name="userName" placeholder="User Name" class="input" required />
+    <div class="relative">
+      <select [(ngModel)]="workout.workoutType" name="workoutType" class="input" required>
+        <option value="">Select Workout Type</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Strength">Strength</option>
+        <option value="Flexibility">Flexibility</option>
+        <option value="Running">Running</option>
+        <option value ="Cycling">Cycling</option>
+      </select>
+      <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+        <svg class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </span>
+    </div>
+    <input [(ngModel)]="workout.minutes" name="minutes" type="number" placeholder="Minutes" class="input" required />
+    <input [(ngModel)]="workout.date" name="date" type="date" class="input" required />
+    <button type="submit" class="button">Add Workout</button>
+  </form>
+</div>
+
+  

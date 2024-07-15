@@ -6,8 +6,28 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <style>
+    .welcome-banner {
+      background-image: url("../public/ease-3134828_1280.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      height: 450px; /* Ensure there is some height to the banner */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+
+    }
+  </style>
 </head>
 <body>
+  <div class="welcome-banner">
+    <h3 class="text-4xl font-bold text-center text-white">Welcome to WellTrack</h3>
+  </div>
+  <router-outlet></router-outlet>
+
   <app-root></app-root>
 </body>
 </html>

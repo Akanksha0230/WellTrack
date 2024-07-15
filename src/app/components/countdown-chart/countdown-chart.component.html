@@ -1,0 +1,19 @@
+<div class="countdown-container">
+    <svg class="countdown-chart" viewBox="0 0 36 36">
+      <path
+        class="circle-bg"
+        d="M18 2.0845
+           a 15.9155 15.9155 0 0 1 0 31.831
+           a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+      <path
+        class="circle"
+        [attr.stroke-dasharray]="progress + ', 100'"
+        d="M18 2.0845
+           a 15.9155 15.9155 0 0 1 0 31.831
+           a 15.9155 15.9155 0 0 1 0 -31.831"
+      />
+    </svg>
+    <div class="countdown-text">{{ remainingTime }}s</div>
+  </div>
+  
