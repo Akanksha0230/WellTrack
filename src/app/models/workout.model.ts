@@ -6,4 +6,3 @@ export interface Workout {
     minutes: number;
     date: Date;
   }
-  
