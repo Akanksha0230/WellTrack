@@ -46,3 +46,4 @@ export class CountdownChartComponent implements OnInit, OnChanges, OnDestroy {
     clearInterval(this.interval);
   }
 }
+
